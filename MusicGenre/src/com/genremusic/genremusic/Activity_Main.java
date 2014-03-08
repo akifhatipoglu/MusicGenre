@@ -30,7 +30,7 @@ public class Activity_Main extends Activity {
 		for(String s:musiclist){
 			System.out.println(s);
 		}
-		System.out.println(musiclist.size());
+	
 		
 		
 		

@@ -2,15 +2,13 @@ package com.genremusic.genremusic;
 
 import java.util.List;
 
-import com.mp3.mp3scanner.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
+
+import com.mp3.mp3scanner.R;
 
 public class Activity_Main extends Activity {
 	private ListView list;

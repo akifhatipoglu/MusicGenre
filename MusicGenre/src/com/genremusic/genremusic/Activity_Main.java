@@ -27,10 +27,10 @@ public class Activity_Main extends Activity {
 		list = (ListView) findViewById(R.id.listView1);
 		list.setAdapter(adapter);
 		
-		for(String s:musiclist){
-			System.out.println(s);
+		for (int i = 0; i < 12; i++) {
+			System.out.println("ss");
 		}
-	
+		
 		
 		
 		

@@ -2,5 +2,5 @@
 package com.mp3.mp3scanner;
 
 public final class BuildConfig {
-	public final static boolean DEBUG = true;
+    public final static boolean DEBUG = true;
 }

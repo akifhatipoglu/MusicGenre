@@ -21,20 +21,15 @@ public class Activity_Main extends Activity {
 
 		MusicLibraryScanner scanner = new MusicLibraryScanner();
 		List<String> musiclist = scanner.getMusicFromStorage(this);
-		List<String> genreslist=scanner.getMusicGenresFromStorage(this);
+		
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, musiclist);
-		final ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, genreslist);
+		
+		
 		list = (ListView) findViewById(R.id.listView1);
 		list.setAdapter(adapter);
 		
-		/*Button btn_genres=(Button)findViewById(R.id.button_genres);
-		btn_genres.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				list.setAdapter(adapter2);
-			}
-		});*/
+		
 		
 		
 		

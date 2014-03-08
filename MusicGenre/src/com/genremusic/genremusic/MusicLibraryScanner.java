@@ -72,6 +72,7 @@ public class MusicLibraryScanner {
 		}
 		return getinfo;
 	}
+	
 	public List<String> getMusicGenresFromStorage(Context context){
 		info="";
 		List<String> getinfo = new ArrayList<String>();

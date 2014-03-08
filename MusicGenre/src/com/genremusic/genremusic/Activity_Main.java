@@ -31,7 +31,9 @@ public class Activity_Main extends Activity {
 			System.out.println("ss");
 		}
 		
-		
+		for (String s : musiclist){
+			System.out.println(s);
+		}
 		
 		
 	}

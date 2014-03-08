@@ -28,13 +28,13 @@ public class Activity_Main extends Activity {
 		list = (ListView) findViewById(R.id.listView1);
 		list.setAdapter(adapter);
 		
-		Button btn_genres=(Button)findViewById(R.id.button_genres);
+		/*Button btn_genres=(Button)findViewById(R.id.button_genres);
 		btn_genres.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				list.setAdapter(adapter2);
 			}
-		});
+		});*/
 		
 		
 		

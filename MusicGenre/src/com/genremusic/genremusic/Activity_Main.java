@@ -30,6 +30,9 @@ public class Activity_Main extends Activity {
 		for (int i = 0; i < 12; i++) {
 			System.out.println("ss");
 		}
+		for (int i = 0; i < 12; i++) {
+			System.out.println("asasdjasf");
+		}
 		
 		
 		

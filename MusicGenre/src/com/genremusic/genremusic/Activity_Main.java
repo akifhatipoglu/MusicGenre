@@ -27,7 +27,9 @@ public class Activity_Main extends Activity {
 		list = (ListView) findViewById(R.id.listView1);
 		list.setAdapter(adapter);
 		
-		
+		for(String s:musiclist){
+			System.out.println(s);
+		}
 		
 		
 		

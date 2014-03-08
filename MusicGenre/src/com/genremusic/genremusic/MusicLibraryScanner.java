@@ -16,7 +16,7 @@ public class MusicLibraryScanner {
 
 	private static Cursor mediaCursor;
 	private static Cursor genresCursor;
-	//Song from Secret Garden
+	
 	private static String[] mediaProjection = { MediaStore.Audio.Media._ID,
 			MediaStore.Audio.Media.ARTIST, MediaStore.Audio.Media.ALBUM,
 			MediaStore.Audio.Media.TITLE };

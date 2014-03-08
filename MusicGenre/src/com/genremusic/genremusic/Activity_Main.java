@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class Activity_Main extends Activity {
-	ListView list;
+	private ListView list;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

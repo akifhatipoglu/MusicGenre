@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.mp3.mp3scanner.R;
 
 public class Activity_Main extends Activity {
@@ -18,14 +17,18 @@ public class Activity_Main extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__main);
 
-		MusicLibraryScanner scanner = new MusicLibraryScanner();
+		/*MusicLibraryScanner scanner = new MusicLibraryScanner();
 		List<String> musiclist = scanner.getMusicFromStorage(this);
 
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, musiclist);
 
 		list = (ListView) findViewById(R.id.listView1);
-		list.setAdapter(adapter);
+		list.setAdapter(adapter);*/
+
+		MusicLibraryScannerAsyncTask task = new MusicLibraryScannerAsyncTask(
+				this);
+		task.execute();
 
 	}
 

@@ -16,7 +16,7 @@ public class MusicLibraryScanner {
 
 	private static Cursor mediaCursor;
 	private static Cursor genresCursor;
-	
+
 	private static String[] mediaProjection = { MediaStore.Audio.Media._ID,
 			MediaStore.Audio.Media.ARTIST, MediaStore.Audio.Media.ALBUM,
 			MediaStore.Audio.Media.TITLE };
@@ -25,7 +25,7 @@ public class MusicLibraryScanner {
 	static String info = "";
 
 	public List<String> getMusicFromStorage(Context context) {
-		info="";
+		info = "";
 		List<String> getinfo = new ArrayList<String>();
 		mediaCursor = context.getContentResolver().query(
 				MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, mediaProjection,
@@ -72,15 +72,15 @@ public class MusicLibraryScanner {
 		}
 		return getinfo;
 	}
-	
-	public List<String> getMusicGenresFromStorage(Context context){
-		info="";
+
+	public List<String> getMusicGenresFromStorage(Context context) {
+		info = "";
 		List<String> getinfo = new ArrayList<String>();
 		int id_column_index = mediaCursor
 				.getColumnIndexOrThrow(BaseColumns._ID);
 		int musicId = Integer.parseInt(mediaCursor.getString(id_column_index));
-		Uri uri = MediaStore.Audio.Genres.getContentUriForAudioId(
-				"external", musicId);
+		Uri uri = MediaStore.Audio.Genres.getContentUriForAudioId("external",
+				musicId);
 		genresCursor = context.getContentResolver().query(uri,
 				genresProjection, null, null, null);
 		int genre_column_index = genresCursor
@@ -89,12 +89,11 @@ public class MusicLibraryScanner {
 		if (genresCursor.moveToFirst()) {
 			do {
 				info += "Genres:";
-				info += genresCursor.getString(genre_column_index)
-						+ " ";
+				info += genresCursor.getString(genre_column_index) + " ";
 				getinfo.add(info);
 			} while (genresCursor.moveToNext());
 		}
-		
+
 		return getinfo;
 	}
 }

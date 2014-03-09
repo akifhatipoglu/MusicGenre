@@ -12,6 +12,7 @@ import com.mp3.mp3scanner.R;
 
 public class Activity_Main extends Activity {
 	private ListView list;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -19,23 +20,13 @@ public class Activity_Main extends Activity {
 
 		MusicLibraryScanner scanner = new MusicLibraryScanner();
 		List<String> musiclist = scanner.getMusicFromStorage(this);
-		
-		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, musiclist);
-		
-		
+
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, musiclist);
+
 		list = (ListView) findViewById(R.id.listView1);
 		list.setAdapter(adapter);
-		
-		for (int i = 0; i < 12; i++) {
-			System.out.println("ss");
-		}
-	for (String s : musiclist){
-			System.out.println(s);
-		}
-		
-		
-		
+
 	}
 
 	@Override
